@@ -55,12 +55,14 @@ export const CubeNet: React.FC<CubeNetProps> = ({ title = "正方体 (Cube)", is
       </div>
 
       {/* 3D Scene Container - Scaled down on mobile */}
+      {/* UPDATE: Increased min-h to 350px, removed overflow-hidden, added vertical shift */}
       <div 
-        className="relative w-full flex-1 min-h-[250px] cursor-grab active:cursor-grabbing perspective-800 flex items-center justify-center overflow-hidden" 
+        className="relative w-full flex-1 min-h-[350px] cursor-grab active:cursor-grabbing perspective-800 flex items-center justify-center overflow-visible" 
         onMouseMove={handleMouseMove}
         style={{ perspective: '1000px' }}
       >
-        <div className="transform scale-75 md:scale-100 transition-transform duration-300">
+        {/* UPDATE: Added -translate-y-12 to shift the whole model up on mobile so the bottom face (6) is visible */}
+        <div className="transform scale-75 md:scale-100 transition-transform duration-300 -translate-y-12 md:translate-y-0">
             <div 
               className="relative w-0 h-0 transition-transform duration-100 ease-linear"
               style={{ 
