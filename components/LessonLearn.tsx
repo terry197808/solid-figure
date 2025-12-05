@@ -13,7 +13,6 @@ export const LessonLearn: React.FC<LessonLearnProps> = ({ onNavigateToUnfold }) 
 
   const handleShapeClick = async (shapeId: ShapeType) => {
     if (selectedShape === shapeId) {
-       // Optional: toggle off if needed, but keeping it selected is usually better for mobile focus
        return;
     }
     
@@ -94,17 +93,17 @@ export const LessonLearn: React.FC<LessonLearnProps> = ({ onNavigateToUnfold }) 
                 </button>
               </div>
 
-              {/* AI Riddle Section */}
+              {/* Riddle Section - Updated text and icon */}
               <div className="flex-1 bg-gradient-to-br from-purple-100 to-blue-100 p-4 md:p-6 rounded-2xl w-full mt-4 md:mt-0">
                 <div className="flex items-center gap-2 mb-2 md:mb-4">
-                   <span className="text-xl md:text-2xl">🤖</span>
-                   <h4 className="font-bold text-purple-800 text-sm md:text-base">AI 谜语时间</h4>
+                   <span className="text-xl md:text-2xl">🧩</span>
+                   <h4 className="font-bold text-purple-800 text-sm md:text-base">趣味谜语</h4>
                 </div>
                 
                 {loadingRiddle ? (
                   <div className="flex items-center gap-2 text-gray-500 text-sm">
                     <div className="w-3 h-3 bg-purple-400 rounded-full animate-ping"></div>
-                    正在编谜语...
+                    正在准备谜语...
                   </div>
                 ) : (
                   <blockquote className="text-lg md:text-xl text-purple-900 font-medium leading-relaxed font-serif">

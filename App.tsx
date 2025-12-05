@@ -52,7 +52,7 @@ const App: React.FC = () => {
       {/* Footer - Hidden on mobile to save space */}
       <footer className="bg-white border-t border-gray-200 py-4 text-center text-gray-400 text-sm shrink-0 hidden md:block">
          <p>© 2024 Math Explorers. Designed for Kids.</p>
-         <p className="mt-1 text-xs">Powered by React & Gemini</p>
+         <p className="mt-1 text-xs">Powered by React</p>
       </footer>
     </div>
   );
